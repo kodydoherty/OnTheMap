@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		CBDD3EDD1B52AE410090FE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */; };
 		CBDD3EE01B52AE410090FE54 /* OnTheMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EDE1B52AE410090FE54 /* OnTheMap.xcdatamodeld */; };
-		CBDD3EE21B52AE410090FE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EE11B52AE410090FE54 /* ViewController.swift */; };
 		CBDD3EE51B52AE410090FE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDD3EE31B52AE410090FE54 /* Main.storyboard */; };
 		CBDD3EE71B52AE410090FE54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDD3EE61B52AE410090FE54 /* Images.xcassets */; };
 		CBDD3EEA1B52AE410090FE54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBDD3EE81B52AE410090FE54 /* LaunchScreen.xib */; };
 		CBDD3EF61B52AE410090FE54 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EF51B52AE410090FE54 /* OnTheMapTests.swift */; };
+		CBDD3F001B52AEE40090FE54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */; };
+		CBDD3F021B52AF1C0090FE54 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */; };
+		CBDD3F041B52AF4F0090FE54 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */; };
+		CBDD3F081B52B9330090FE54 /* u.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDD3F071B52B9330090FE54 /* u.png */; };
+		CBDD3F0F1B52CD0A0090FE54 /* StudentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3F0E1B52CD0A0090FE54 /* StudentClient.swift */; };
+		CBDD3F111B52CDB40090FE54 /* StudentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3F101B52CDB40090FE54 /* StudentConstants.swift */; };
+		CBDD3F131B52CFB70090FE54 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3F121B52CFB70090FE54 /* Student.swift */; };
+		CBF8BD9C1B5409170081C703 /* StudentConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF8BD9B1B5409170081C703 /* StudentConvenience.swift */; };
+		CBF8BD9E1B5431480081C703 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF8BD9D1B5431480081C703 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +39,21 @@
 		CBDD3EDB1B52AE410090FE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDD3EDF1B52AE410090FE54 /* OnTheMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnTheMap.xcdatamodel; sourceTree = "<group>"; };
-		CBDD3EE11B52AE410090FE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBDD3EE41B52AE410090FE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBDD3EE61B52AE410090FE54 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBDD3EE91B52AE410090FE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CBDD3EEF1B52AE410090FE54 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDD3EF41B52AE410090FE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDD3EF51B52AE410090FE54 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
+		CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CBDD3F071B52B9330090FE54 /* u.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u.png; sourceTree = "<group>"; };
+		CBDD3F0E1B52CD0A0090FE54 /* StudentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentClient.swift; sourceTree = "<group>"; };
+		CBDD3F101B52CDB40090FE54 /* StudentConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentConstants.swift; sourceTree = "<group>"; };
+		CBDD3F121B52CFB70090FE54 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		CBF8BD9B1B5409170081C703 /* StudentConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentConvenience.swift; sourceTree = "<group>"; };
+		CBF8BD9D1B5431480081C703 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF8BD9E1B5431480081C703 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 		CBDD3ECE1B52AE410090FE54 = {
 			isa = PBXGroup;
 			children = (
+				CBF8BD9D1B5431480081C703 /* MapKit.framework */,
 				CBDD3ED91B52AE410090FE54 /* OnTheMap */,
 				CBDD3EF21B52AE410090FE54 /* OnTheMapTests */,
 				CBDD3ED81B52AE410090FE54 /* Products */,
@@ -79,9 +97,14 @@
 		CBDD3ED91B52AE410090FE54 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */,
-				CBDD3EE11B52AE410090FE54 /* ViewController.swift */,
 				CBDD3EE31B52AE410090FE54 /* Main.storyboard */,
+				CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */,
+				CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */,
+				CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */,
+				CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */,
+				CBDD3F091B52CC480090FE54 /* Model */,
+				CBDD3F0A1B52CC500090FE54 /* View */,
+				CBDD3F0B1B52CC6D0090FE54 /* Controller */,
 				CBDD3EE61B52AE410090FE54 /* Images.xcassets */,
 				CBDD3EE81B52AE410090FE54 /* LaunchScreen.xib */,
 				CBDD3EDE1B52AE410090FE54 /* OnTheMap.xcdatamodeld */,
@@ -93,6 +116,7 @@
 		CBDD3EDA1B52AE410090FE54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CBDD3F071B52B9330090FE54 /* u.png */,
 				CBDD3EDB1B52AE410090FE54 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +137,48 @@
 				CBDD3EF41B52AE410090FE54 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBDD3F091B52CC480090FE54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD3F0C1B52CC820090FE54 /* Clients */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CBDD3F0A1B52CC500090FE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CBDD3F0B1B52CC6D0090FE54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			path = OnTheMap.xcodeproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		CBDD3F0C1B52CC820090FE54 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD3F0D1B52CC910090FE54 /* Student */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		CBDD3F0D1B52CC910090FE54 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD3F0E1B52CD0A0090FE54 /* StudentClient.swift */,
+				CBDD3F101B52CDB40090FE54 /* StudentConstants.swift */,
+				CBF8BD9B1B5409170081C703 /* StudentConvenience.swift */,
+				CBDD3F121B52CFB70090FE54 /* Student.swift */,
+			);
+			name = Student;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +230,11 @@
 				TargetAttributes = {
 					CBDD3ED61B52AE410090FE54 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CBDD3EEE1B52AE410090FE54 = {
 						CreatedOnToolsVersion = 6.4;
@@ -196,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDD3EE51B52AE410090FE54 /* Main.storyboard in Resources */,
+				CBDD3F081B52B9330090FE54 /* u.png in Resources */,
 				CBDD3EEA1B52AE410090FE54 /* LaunchScreen.xib in Resources */,
 				CBDD3EE71B52AE410090FE54 /* Images.xcassets in Resources */,
 			);
@@ -215,8 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDD3EE21B52AE410090FE54 /* ViewController.swift in Sources */,
+				CBDD3F001B52AEE40090FE54 /* LoginViewController.swift in Sources */,
+				CBF8BD9C1B5409170081C703 /* StudentConvenience.swift in Sources */,
+				CBDD3F041B52AF4F0090FE54 /* TableViewController.swift in Sources */,
+				CBDD3F0F1B52CD0A0090FE54 /* StudentClient.swift in Sources */,
+				CBDD3F131B52CFB70090FE54 /* Student.swift in Sources */,
 				CBDD3EDD1B52AE410090FE54 /* AppDelegate.swift in Sources */,
+				CBDD3F111B52CDB40090FE54 /* StudentConstants.swift in Sources */,
+				CBDD3F021B52AF1C0090FE54 /* MapViewController.swift in Sources */,
 				CBDD3EE01B52AE410090FE54 /* OnTheMap.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +491,7 @@
 				CBDD3EFB1B52AE410090FE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBDD3EFC1B52AE410090FE54 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +500,7 @@
 				CBDD3EFE1B52AE410090FE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
