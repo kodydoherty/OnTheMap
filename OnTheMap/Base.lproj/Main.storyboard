@@ -3,6 +3,20 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Thin.ttf">
+            <string>Roboto-Thin</string>
+            <string>Roboto-Thin</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="VnM-Hs-v2s">
@@ -152,7 +166,6 @@
                                 <action selector="logout:" destination="vXZ-lx-hvc" id="d1Q-pz-CWo"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="sV8-Ju-0xZ"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -163,6 +176,151 @@
             </objects>
             <point key="canvasLocation" x="1258" y="-83"/>
         </scene>
+        <!--Add Student View Controller-->
+        <scene sceneID="0Gp-6k-EnL">
+            <objects>
+                <viewController storyboardIdentifier="addStudentLocationVC" id="exK-nF-eWQ" customClass="AddStudentViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2e3-ae-f8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="j2Q-dF-3Md"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9EL-dp-0PZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INg-tr-Som">
+                                <rect key="frame" x="98" y="43" width="124" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="studying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEy-nU-Ae0">
+                                <rect key="frame" x="121" y="71" width="78" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.18823529411764706" green="0.31764705882352939" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-AB-gjp">
+                                <rect key="frame" x="131" y="103" width="57" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSs-mV-DFS">
+                                <rect key="frame" x="99" y="505" width="122" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="RfK-jm-Pxd"/>
+                                </constraints>
+                                <state key="normal" title="Find on the Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="FindOnMapButton:" destination="exK-nF-eWQ" eventType="touchUpInside" id="WGg-7W-pbm"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGG-DP-zjx">
+                                <rect key="frame" x="0.0" y="150" width="320" height="325"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type your location" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-78-WtM">
+                                        <rect key="frame" x="87" y="23" width="145" height="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.45490196078431372" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="CQk-78-WtM" secondAttribute="centerX" id="cVB-dh-Sn2"/>
+                                    <constraint firstItem="CQk-78-WtM" firstAttribute="top" secondItem="bGG-DP-zjx" secondAttribute="top" constant="23" id="z6z-e3-it6"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-D7-Ehc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MtW-BQ-oh2">
+                                        <rect key="frame" x="0.0" y="150" width="320" height="418"/>
+                                    </mapView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="URL" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-OU-BiU">
+                                        <rect key="frame" x="8" y="76" width="304" height="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8f-Ui-Gdm">
+                                        <rect key="frame" x="132" y="508" width="55" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="FEu-0j-Pfm"/>
+                                        </constraints>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submit:" destination="exK-nF-eWQ" eventType="touchUpInside" id="UaR-TU-Lpk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.45490196078431372" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MtW-BQ-oh2" secondAttribute="bottom" id="6e2-rw-Qfi"/>
+                                    <constraint firstItem="MtW-BQ-oh2" firstAttribute="leading" secondItem="jvy-D7-Ehc" secondAttribute="leading" id="AlY-iv-1S5"/>
+                                    <constraint firstAttribute="trailing" secondItem="X3y-OU-BiU" secondAttribute="trailing" constant="8" id="B1N-3S-WeJ"/>
+                                    <constraint firstAttribute="centerX" secondItem="X3y-OU-BiU" secondAttribute="centerX" id="ERu-rP-q43"/>
+                                    <constraint firstAttribute="bottom" secondItem="r8f-Ui-Gdm" secondAttribute="bottom" constant="30" id="Ez5-Nc-QbY"/>
+                                    <constraint firstItem="X3y-OU-BiU" firstAttribute="leading" secondItem="jvy-D7-Ehc" secondAttribute="leading" constant="8" id="N3h-H2-4tf"/>
+                                    <constraint firstAttribute="trailing" secondItem="MtW-BQ-oh2" secondAttribute="trailing" id="WZe-WY-45m"/>
+                                    <constraint firstItem="MtW-BQ-oh2" firstAttribute="top" secondItem="jvy-D7-Ehc" secondAttribute="top" constant="150" id="iBt-ks-DCy"/>
+                                    <constraint firstItem="X3y-OU-BiU" firstAttribute="top" secondItem="jvy-D7-Ehc" secondAttribute="top" constant="76" id="sCJ-xx-9aH"/>
+                                    <constraint firstAttribute="centerX" secondItem="r8f-Ui-Gdm" secondAttribute="centerX" id="wsy-Yw-RD1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4De-XG-ebE">
+                                <rect key="frame" x="258" y="28" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="exK-nF-eWQ" eventType="touchUpInside" id="ESd-hO-rWX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jvy-D7-Ehc" firstAttribute="top" secondItem="9EL-dp-0PZ" secondAttribute="top" id="0tE-2y-sKO"/>
+                            <constraint firstItem="Nnq-AB-gjp" firstAttribute="top" secondItem="qEy-nU-Ae0" secondAttribute="bottom" constant="8" id="4Bt-vb-qn7"/>
+                            <constraint firstAttribute="centerX" secondItem="qEy-nU-Ae0" secondAttribute="centerX" id="6oH-nl-9pR"/>
+                            <constraint firstItem="j2Q-dF-3Md" firstAttribute="top" secondItem="jvy-D7-Ehc" secondAttribute="bottom" id="BBq-7D-pBC"/>
+                            <constraint firstAttribute="centerX" secondItem="Nnq-AB-gjp" secondAttribute="centerX" id="CV5-gQ-dpb"/>
+                            <constraint firstItem="jvy-D7-Ehc" firstAttribute="leading" secondItem="9EL-dp-0PZ" secondAttribute="leading" id="DpE-4G-0Oc"/>
+                            <constraint firstItem="j2Q-dF-3Md" firstAttribute="top" secondItem="tSs-mV-DFS" secondAttribute="bottom" constant="33" id="Esh-8H-MgY"/>
+                            <constraint firstAttribute="centerX" secondItem="tSs-mV-DFS" secondAttribute="centerX" id="G5p-zF-UyT"/>
+                            <constraint firstItem="4De-XG-ebE" firstAttribute="top" secondItem="2e3-ae-f8P" secondAttribute="bottom" constant="8" id="Iof-YE-x7e"/>
+                            <constraint firstItem="bGG-DP-zjx" firstAttribute="top" secondItem="Nnq-AB-gjp" secondAttribute="bottom" constant="23.5" id="IzZ-iP-x8q"/>
+                            <constraint firstAttribute="trailing" secondItem="bGG-DP-zjx" secondAttribute="trailing" id="Spg-Uk-fgE"/>
+                            <constraint firstAttribute="trailing" secondItem="jvy-D7-Ehc" secondAttribute="trailing" id="XWn-fa-VH5"/>
+                            <constraint firstAttribute="centerX" secondItem="INg-tr-Som" secondAttribute="centerX" id="fUU-Xc-Q6V"/>
+                            <constraint firstItem="bGG-DP-zjx" firstAttribute="leading" secondItem="9EL-dp-0PZ" secondAttribute="leading" id="hnd-Se-KQa"/>
+                            <constraint firstItem="INg-tr-Som" firstAttribute="top" secondItem="2e3-ae-f8P" secondAttribute="bottom" constant="23" id="oUk-qu-C4T"/>
+                            <constraint firstItem="qEy-nU-Ae0" firstAttribute="top" secondItem="INg-tr-Som" secondAttribute="bottom" constant="5.5" id="u8q-29-xGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="4De-XG-ebE" secondAttribute="trailing" constant="16" id="zEF-Nm-fnd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="4De-XG-ebE" id="bET-2S-oJ1"/>
+                        <outlet property="findMapButton" destination="tSs-mV-DFS" id="6Zx-Ru-mEb"/>
+                        <outlet property="locationTextField" destination="CQk-78-WtM" id="fPT-g2-j9Y"/>
+                        <outlet property="mapView" destination="MtW-BQ-oh2" id="xRL-gI-WXD"/>
+                        <outlet property="newView" destination="jvy-D7-Ehc" id="Ihq-2u-zzR"/>
+                        <outlet property="submitButton" destination="r8f-Ui-Gdm" id="CdH-Ny-C3w"/>
+                        <outlet property="urlTextField" destination="X3y-OU-BiU" id="jAj-c4-BKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-QM-VfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="258"/>
+        </scene>
         <!--On The Map-->
         <scene sceneID="Ag1-7k-5BG">
             <objects>
@@ -172,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8qj-6N-KhZ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8qj-6N-KhZ">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8qj-6N-KhZ" id="8UV-QK-fyh">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -191,6 +349,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tb" destination="dGC-Y5-Zoo" id="D8Q-bN-MIH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz6-PV-FTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,7 +361,7 @@
         <scene sceneID="s5U-6u-YaT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WfS-zg-FIK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="OqA-ae-ZVO"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mapbutton" id="OqA-ae-ZVO"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uXI-Un-wCr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L10-8m-lMa">
@@ -220,7 +381,7 @@
         <scene sceneID="ZuU-LJ-832">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hfI-7B-gmF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="327-OI-Dl4"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="327-OI-Dl4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fg3-9G-dT1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -237,6 +398,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list" width="32" height="32"/>
+        <image name="mapbutton" width="32" height="32"/>
         <image name="u.png" width="83" height="83"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

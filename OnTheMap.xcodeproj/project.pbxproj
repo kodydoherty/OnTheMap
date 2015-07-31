@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBCDEB001B65862C0079B7A6 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDEAFF1B65862C0079B7A6 /* AddStudentViewController.swift */; };
 		CBDD3EDD1B52AE410090FE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */; };
 		CBDD3EE01B52AE410090FE54 /* OnTheMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBDD3EDE1B52AE410090FE54 /* OnTheMap.xcdatamodeld */; };
 		CBDD3EE51B52AE410090FE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDD3EE31B52AE410090FE54 /* Main.storyboard */; };
@@ -35,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBCDEAFF1B65862C0079B7A6 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStudentViewController.swift; path = ../AddStudentViewController.swift; sourceTree = "<group>"; };
+		CBCDEB011B66E90B0079B7A6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CBCDEB021B66E90B0079B7A6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CBCDEB031B66E90B0079B7A6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		CBDD3ED71B52AE410090FE54 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDD3EDB1B52AE410090FE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +50,9 @@
 		CBDD3EEF1B52AE410090FE54 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDD3EF41B52AE410090FE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDD3EF51B52AE410090FE54 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
-		CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../OnTheMap/LoginViewController.swift; sourceTree = "<group>"; };
+		CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../OnTheMap/MapViewController.swift; sourceTree = "<group>"; };
+		CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../OnTheMap/TableViewController.swift; sourceTree = "<group>"; };
 		CBDD3F071B52B9330090FE54 /* u.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u.png; sourceTree = "<group>"; };
 		CBDD3F0E1B52CD0A0090FE54 /* StudentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentClient.swift; sourceTree = "<group>"; };
 		CBDD3F101B52CDB40090FE54 /* StudentConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentConstants.swift; sourceTree = "<group>"; };
@@ -75,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CBCDEB041B66E9160079B7A6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CBCDEB011B66E90B0079B7A6 /* Roboto-Medium.ttf */,
+				CBCDEB031B66E90B0079B7A6 /* Roboto-Thin.ttf */,
+				CBCDEB021B66E90B0079B7A6 /* Roboto-Regular.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		CBDD3ECE1B52AE410090FE54 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +112,8 @@
 		CBDD3ED91B52AE410090FE54 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				CBDD3EE31B52AE410090FE54 /* Main.storyboard */,
+				CBCDEB041B66E9160079B7A6 /* fonts */,
 				CBDD3EDC1B52AE410090FE54 /* AppDelegate.swift */,
-				CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */,
-				CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */,
-				CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */,
 				CBDD3F091B52CC480090FE54 /* Model */,
 				CBDD3F0A1B52CC500090FE54 /* View */,
 				CBDD3F0B1B52CC6D0090FE54 /* Controller */,
@@ -150,6 +162,7 @@
 		CBDD3F0A1B52CC500090FE54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBDD3EE31B52AE410090FE54 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,6 +170,10 @@
 		CBDD3F0B1B52CC6D0090FE54 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CBCDEAFF1B65862C0079B7A6 /* AddStudentViewController.swift */,
+				CBDD3F031B52AF4F0090FE54 /* TableViewController.swift */,
+				CBDD3F011B52AF1C0090FE54 /* MapViewController.swift */,
+				CBDD3EFF1B52AEE40090FE54 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			path = OnTheMap.xcodeproj;
@@ -293,6 +310,7 @@
 				CBDD3F0F1B52CD0A0090FE54 /* StudentClient.swift in Sources */,
 				CBDD3F131B52CFB70090FE54 /* Student.swift in Sources */,
 				CBDD3EDD1B52AE410090FE54 /* AppDelegate.swift in Sources */,
+				CBCDEB001B65862C0079B7A6 /* AddStudentViewController.swift in Sources */,
 				CBDD3F111B52CDB40090FE54 /* StudentConstants.swift in Sources */,
 				CBDD3F021B52AF1C0090FE54 /* MapViewController.swift in Sources */,
 				CBDD3EE01B52AE410090FE54 /* OnTheMap.xcdatamodeld in Sources */,
