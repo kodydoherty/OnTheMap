@@ -105,8 +105,6 @@ class AddStudentViewController: UIViewController {
             }
         })
         // Go back to previous view
-
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
