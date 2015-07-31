@@ -228,10 +228,15 @@
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Icz-6r-8s5">
+                                        <rect key="frame" x="150" y="-10" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.45490196078431372" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Icz-6r-8s5" secondAttribute="centerY" id="Hxz-wa-CI9"/>
                                     <constraint firstAttribute="centerX" secondItem="CQk-78-WtM" secondAttribute="centerX" id="cVB-dh-Sn2"/>
+                                    <constraint firstAttribute="centerX" secondItem="Icz-6r-8s5" secondAttribute="centerX" id="sJH-NI-hce"/>
                                     <constraint firstItem="CQk-78-WtM" firstAttribute="top" secondItem="bGG-DP-zjx" secondAttribute="top" constant="23" id="z6z-e3-it6"/>
                                 </constraints>
                             </view>
@@ -308,6 +313,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityViewer" destination="Icz-6r-8s5" id="A6J-ug-LAE"/>
                         <outlet property="cancelButton" destination="4De-XG-ebE" id="bET-2S-oJ1"/>
                         <outlet property="findMapButton" destination="tSs-mV-DFS" id="6Zx-Ru-mEb"/>
                         <outlet property="locationTextField" destination="CQk-78-WtM" id="fPT-g2-j9Y"/>

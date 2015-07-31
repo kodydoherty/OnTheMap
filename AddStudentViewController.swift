@@ -19,6 +19,7 @@ class AddStudentViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var findMapButton: UIButton!
     
+    @IBOutlet weak var activityViewer: UIActivityIndicatorView!
     //Varibales for posting location
     var data = [String:AnyObject]()
     var lat:Double?
@@ -31,7 +32,7 @@ class AddStudentViewController: UIViewController {
         // Make the buttons rounded
         findMapButton.layer.cornerRadius = 10
         submitButton.layer.cornerRadius = 10
-        
+        activityViewer.hidesWhenStopped = true
         // Hide the map and URL view
         newViewHidden(true)
     }
@@ -44,6 +45,7 @@ class AddStudentViewController: UIViewController {
 
     // Get lat and long for the students location string and display map and url view
     @IBAction func FindOnMapButton(sender: UIButton) {
+        self.activityViewer.startAnimating()
         self.address = locationTextField.text
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(self.address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
@@ -60,6 +62,8 @@ class AddStudentViewController: UIViewController {
                 self.lat = placemark.location.coordinate.latitude
                 self.long = placemark.location.coordinate.longitude
             
+            
+                self.activityViewer.stopAnimating()
                 // Get the users first and last name to for the location post to parse
                 StudentClient.sharedInstance().getUdacityUsersInfo(){ (result, errorString) in
                     if errorString != nil {
@@ -67,7 +71,7 @@ class AddStudentViewController: UIViewController {
                         dispatch_async(dispatch_get_main_queue()) {
                           self.alert("Issue getting user data")
                         }
-                    }
+                    } 
                 }
            } else {
                     dispatch_async(dispatch_get_main_queue()) {
@@ -79,6 +83,7 @@ class AddStudentViewController: UIViewController {
     
     @IBAction func submit(sender: UIButton) {
         // Setup the data to post
+        
         var data:[String:AnyObject?] = [
             "uniqueKey": StudentClient.sharedInstance().userID ,
             "firstName": StudentClient.sharedInstance().firstName,
@@ -94,13 +99,14 @@ class AddStudentViewController: UIViewController {
         // Post data to create a new student location
         StudentClient.sharedInstance().postStudentLocations(newdata, completionHandler: { (result, error) in
             if error != nil {
-                println(error)
                 dispatch_async(dispatch_get_main_queue()) {
                     self.alert("Issue creating user location")
                 }
             }
         })
         // Go back to previous view
+
+        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

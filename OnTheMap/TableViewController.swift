@@ -14,7 +14,6 @@ class TableViewController: UITableViewController  {
     @IBOutlet var tb: UITableView!
     
     // Initilize variables
-    var students:[Student] = [Student]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +26,12 @@ class TableViewController: UITableViewController  {
     
     // Tableview functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return students.count
+        return StudentClient.sharedInstance().students.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tb.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        var student = students[indexPath.row]
+        var student = StudentClient.sharedInstance().students[indexPath.row]
         cell.textLabel!.text = "\(student.firstName!) \(student.lastName!)"
         cell.imageView?.image = UIImage(named: "mapblue")
         return cell
@@ -44,7 +43,7 @@ class TableViewController: UITableViewController  {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let app = UIApplication.sharedApplication()
-        app.openURL(NSURL(string: students[indexPath.row].mediaURL!)!)
+        app.openURL(NSURL(string: StudentClient.sharedInstance().students[indexPath.row].mediaURL!)!)
     }
     
     // IBActions
@@ -60,6 +59,8 @@ class TableViewController: UITableViewController  {
                         self.presentViewController(nextVC, animated: true, completion: nil)
                     })
                     
+                } else {
+                    self.alert("Network issues")
                 }
             }
             
@@ -70,12 +71,14 @@ class TableViewController: UITableViewController  {
     func getStudentLocations() {
         StudentClient.sharedInstance().getStudentLocations(){ (result, error) in
             if let students = result {
-                self.students = students
+                StudentClient.sharedInstance().students = students
                 dispatch_async(dispatch_get_main_queue()) {
                     self.tb.reloadData()
                 }
             } else {
-                println(error)
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.alert("Could not load student data")
+                }
             }
         }
     }

@@ -15,6 +15,7 @@ class StudentClient: NSObject {
     var userID : String?
     var firstName:String?
     var lastName: String?
+    var students:[Student] = [Student]()
     
     override init() {
         session = NSURLSession.sharedSession()

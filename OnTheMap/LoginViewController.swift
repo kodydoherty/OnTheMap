@@ -27,7 +27,8 @@ class LoginViewController: UIViewController {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.alert("Invalid Username or Password")
                 }
-            } else {
+            }
+            else {
                 if let ses = StudentClient.sharedInstance().sessionID {
                     dispatch_async(dispatch_get_main_queue(), {
                         var nextVC = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarC") as! UITabBarController
