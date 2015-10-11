@@ -8,7 +8,7 @@ Copyright (c) 2015 KodeDen.com. All rights reserved.
 
 ##Description
 -----------
-Udacity IOS nano degree project that shows usage of IOS networking. 
+Udacity IOS nano degree project that shows usage of IOS networking.
 
 ##Frameworks
 -----------
@@ -16,7 +16,7 @@ MapKit
 
 ##Use
 -----------
-1. Login to app with Udacity account to view other studetns on the map.
+1. Login to app with Udacity account to view other students on the map.
 2. Add a study location or view another students study location on the map.
 
 ##References
